@@ -49,7 +49,7 @@
 <meta name="text:Title size" content="25px"/>
 <meta name="text:Header size" content="85px"/>
 
-<meta name="font:Body" content="Helvetica Neue"/>
+<meta name="font:Body" content="museo-sans"/>
 <meta name="font:Date" content="Futura"/>
   
 <meta name="text:Disqus Shortname" content=""/>
@@ -69,12 +69,12 @@
     <!-- New fonts -->
 
     @font-face {
-      font-family: "museo-slab";
+      font-family: "museo-sans";
       src: url("//dl.dropboxusercontent.com/u/2324263/WCMC%20site%20fonts/exljbris%20-%20MuseoSans-100.otf") format("opentype");
     }
 
     @font-face {
-      font-family: "museo-slab";
+      font-family: "museo-sans";
       font-weight: 300;
       src: url("//dl.dropboxusercontent.com/u/2324263/WCMC%20site%20fonts/exljbris%20-%20MuseoSans-300.otf") format("opentype");
     }
@@ -102,7 +102,7 @@ h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal; padding:5px 0;}
 abbr,acronym{border:0;}
 
 p {
-  font-family: "museo-slab", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", Helvetica, Arial, sans-serif;
   font-size: 1em;
   margin-bottom: 10px;
   line-height: 1.5em;
@@ -113,7 +113,7 @@ p {
 body {background:{color:Background}; color:{color:Text}; font:1em/1.6 {font:Body}; margin:0 0 0 0;}
 
 h1, h3 {font-family:{font:Heading};}
-pre,code {font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+pre,code {font-family: "museo-slab", "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 a:link, a:visited {color:{color:Link}; text-decoration:none;}
 a:hover, a:active {color:{color:Link hover};}
@@ -124,7 +124,7 @@ a:hover {
 
 
 
-#header {color:{color:Minor text}; position:relative; margin:-49 auto; padding-top:40px; width:875px;}
+#header {color:{color:Minor text}; position:relative; margin:-49 auto; padding-top:40px; width:80%;}
 
 #header h1 {color:{color:Title}; font-weight:bold; text-align:center; font-size:{text:Header size}; line-height:90%; margin-bottom:30px; margin-top:-30px;}
 #header h1 a:link, #header h1 a:visited {color:{color:Title}; display:block;}
@@ -138,7 +138,7 @@ a:hover {
               text-decoration:none;}
 #header li a:hover {background:none;}
 
-#container {background-color:{color:Container}; margin:30px auto; padding-top:5px; width:875px}
+#container {background-color:{color:Container}; margin:30px auto; padding-top:5px; width:100%}
 
 
 
@@ -191,9 +191,9 @@ p.meta {color:{color:Minor text}; font-style:italic; margin:0;
 h3 {
   font-family: "museo-slab", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 1.65em;
+  font-size: 3em;
   line-height: 1.3em;
-  margin: 0.75em 0;
+  margin: 1em 0;
   color: #5e5a5c;
 }
 
@@ -476,7 +476,7 @@ function iResize() {
 
 
 
-<ol id="posts">
+<ol id="posts" style="width: 80%;">
   
   <div class="top_padding"></div> 
   
