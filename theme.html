@@ -49,7 +49,7 @@
 <meta name="text:Title size" content="25px"/>
 <meta name="text:Header size" content="85px"/>
 
-<meta name="font:Body" content="museo-sans"/>
+<meta name="font:Body" content="Helvetica Neue"/>
 <meta name="font:Date" content="Futura"/>
   
 <meta name="text:Disqus Shortname" content=""/>
@@ -59,31 +59,25 @@
 
   <link rel="shortcut icon" href="{Favicon}"/>
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40718895-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+  </script>
   
   <!-- WCMC custom fonts -->
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//use.typekit.net/srw8dff.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <!-- /WCMC custom fonts -->
 
   <style type="text/css">
-    <!-- New fonts -->
-
-    @font-face {
-      font-family: "museo-sans";
-      src: url("//dl.dropboxusercontent.com/u/2324263/WCMC%20site%20fonts/exljbris%20-%20MuseoSans-100.otf") format("opentype");
-    }
-
-    @font-face {
-      font-family: "museo-sans";
-      font-weight: 300;
-      src: url("//dl.dropboxusercontent.com/u/2324263/WCMC%20site%20fonts/exljbris%20-%20MuseoSans-300.otf") format("opentype");
-    }
-
-    @font-face {
-      font-family: "museo-slab";
-      font-weight: 700;
-      src: url("//dl.dropboxusercontent.com/u/2324263/WCMC%20site%20fonts/exljbris%20-%20MuseoSans-700.otf") format("opentype");
-    }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -92,6 +86,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html{font-size:{text:Caption size};}
@@ -113,7 +113,7 @@ p {
 body {background:{color:Background}; color:{color:Text}; font:1em/1.6 {font:Body}; margin:0 0 0 0;}
 
 h1, h3 {font-family:{font:Heading};}
-pre,code {font-family: "museo-slab", "Lucida Sans Unicode", "Lucida Grande", sans-serif}
+pre,code {font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif}
 
 a:link, a:visited {color:{color:Link}; text-decoration:none;}
 a:hover, a:active {color:{color:Link hover};}
@@ -123,13 +123,67 @@ a:hover {
 }
 
 
+#header {
+    background: #222;
+    width: 100%;
+    padding: 0 5%;
+    border-top: 5px solid #4295d5;
+    overflow: hidden;
+}
 
-#header {color:{color:Minor text}; position:relative; margin:-49 auto; padding-top:40px; width:80%;}
+#header h1 {
+    display: inline-block;
+    width: 15%;
+}
+
+#header img {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 15%;
+}
+
+#header p, #header center, br {
+    display: none;
+}
+
+#header a#site-wcmc {
+    font-size: 1em;
+    float: right;
+    padding: 10px 5% 10px 0;
+}
+
+#header a#site-wcmc:hover {
+    color: #fff;
+}
+
+
+
+#banner {
+    padding-top:40px; 
+    width:100%;
+    z-index: -9999;
+    background-image: url('https://s3.amazonaws.com/ooomf-com-files/BA1yLjNnQCI1yisIZGEi_2013-07-16_1922_IMG_9873.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+#banner h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 80%;
+    margin: auto;
+}
 
 #header h1 {color:{color:Title}; font-weight:bold; text-align:center; font-size:{text:Header size}; line-height:90%; margin-bottom:30px; margin-top:-30px;}
 #header h1 a:link, #header h1 a:visited {color:{color:Title}; display:block;}
 #header h1 a:hover, #header h1 a:active {color:{color:Link hover};}
-#description {font-family:{font:Body}; font-size:{text:Caption size}; text-align:center; line-height:autopx; margin-bottom:20px; margin-top:-5px;}
+#description {font-family:"museo-sans", Helvetica, Arial, sans-serif; font-size:1.5em; text-align:center; line-height:autopx; margin-bottom:20px; margin-top:-5px;}
 #header form {margin-bottom:20px;}
 #header form input {width:630px;}
 #header ul {margin:0 -0.25em 1.5em;}
@@ -138,7 +192,7 @@ a:hover {
               text-decoration:none;}
 #header li a:hover {background:none;}
 
-#container {background-color:{color:Container}; margin:30px auto; padding-top:5px; width:100%}
+#container {background-color:{color:Container}; margin: 0 auto 30px auto; padding-top:0; width:875px}
 
 
 
@@ -188,25 +242,43 @@ p.meta {color:{color:Minor text}; font-style:italic; margin:0;
 .meta a {font-style:normal; white-space:nowrap;}
 .meta .plays {font-weight:bold; font-style:normal;}
 
-h3 {
+h3, h4 {
   font-family: "museo-slab", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 3em;
+}
+
+h3 {
+  font-size: 2.5em;
   line-height: 1.3em;
-  margin: 1em 0;
+  margin: 0.75em 0;
   color: #5e5a5c;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 0.5em 0;
+  color: #bbbbbb;
 }
 
 .title_gap
   {margin-top:-6px;}
 
-h4 {font-size:{text:Date size}; line-height:autopx; margin-bottom:0px;  font-family:{font:Date};}
+h4 {font-size:{text:Date size}; line-height:autopx; margin-bottom:0px;  font-family:"museo-sans", Helvetica, Arial, sans-serif;}
 
 .content a {border-bottom:1px solid {color:Line};}
 .content a:hover {border-bottom-width:1px;}
 .content .photo a {border:none !important;}
 .content ul, .content ol {margin:20px; list-style-position:inside;}
-.content ul li {list-style:disc; list-style-position:inside;}
+.content ul li {
+  list-style:disc; list-style-position:inside;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  line-height: 1.5em;
+  font-weight: 300;
+  color: #5e5a5c;
+  font-family: "museo-sans", Helvetica, Arial, sans-serif;
+}
 
 blockquote {margin:0 0px 20px;border-left:1px solid {color:line}; padding-left:20px; }
 blockquote i, blockquote em, blockquote [lang="ja"] {font-style:normal;}
@@ -438,21 +510,15 @@ function iResize() {
 
 <div id="container">
 
-
 <div id="header">
   <a href="/">
         {block:IfHeaderImage}<h1><img src="{image:Header}" class="logo" /></h1>{/block:IfHeaderImage}
         {block:IfNotHeaderImage}<h1>{Title}</h1>{/block:IfNotHeaderImage}</a>
-
-
-
-  {block:Description}<p id="description">
-    {Description}
-  </p>{/block:Description}
+    <br>
+    <a id="site-wcmc" href="http://beta.unep-wcmc.org">New WCMC site</a>
 
 <p>
 {block:IfCenterlinks}<center>{/block:IfCenterlinks}
-
 
 {block:HasPages}{block:Pages}
 
@@ -475,8 +541,15 @@ function iResize() {
 </div>
 
 
+<div id="banner">
+    {block:Description}<h1 id="description">
+    {Description}
+    </h1>
+    {/block:Description}
+</div>
 
-<ol id="posts" style="width: 80%;">
+
+<ol id="posts">
   
   <div class="top_padding"></div> 
   
