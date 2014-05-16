@@ -60,16 +60,16 @@
   <link rel="shortcut icon" href="{Favicon}"/>
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-40718895-1', 'unep-wcmc.org');
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
-  </script>
+      ga('create', 'UA-40718895-1', 'unep-wcmc.org');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
   
   <!-- WCMC custom fonts -->
     <script type="text/javascript" src="//use.typekit.net/srw8dff.js"></script>
@@ -87,11 +87,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html{font-size:{text:Caption size};}
 table{border-collapse:collapse;border-spacing:0;}
 fieldset,img{border:0;}
 caption,cite,code,dfn,th,var{font-style:normal;font-weight:normal;}
-h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal; padding:5px 0;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal; padding:0;}
 abbr,acronym{border:0;}
 
 p {
@@ -116,13 +122,70 @@ a:hover {
 }
 
 
+#header {
+    background: #222;
+    width: 100%;
+    padding: 0 5%;
+    border-top: 5px solid #4295d5;
+    overflow: hidden;
+}
 
-#header {color:{color:Minor text}; position:relative; margin:-49 auto; padding-top:40px; width:875px;}
+#header h1 {
+    display: inline-block;
+    width: 10%;
+}
 
-#header h1 {color:{color:Title}; font-weight:bold; text-align:center; font-size:{text:Header size}; line-height:90%; margin-bottom:30px; margin-top:-30px;}
+#header img {
+    position: absolute;
+    width: 10%;
+}
+
+#header p, #header center, br {
+    display: none;
+}
+
+#header a {
+    font-family: "museo-sans", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+#header a#site-wcmc {
+    font-size: 1em;
+    float: right;
+    padding: 10px 5% 10px 0;
+}
+
+#header a#site-wcmc:hover {
+    color: #fff;
+}
+
+
+
+#banner {
+    padding-top:40px;
+    width:100%;
+    z-index: -9999;
+    background-image: url('http://informatics-blog-assets.s3.amazonaws.com/Blog%20Background%20-%20web.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+#banner h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 60%;
+    margin: auto;
+}
+
+#header h1 {color:{color:Title}; font-weight:bold; text-align:center; font-size:{text:Header size}; line-height:90%; margin-bottom:30px; margin-top:-5px;}
 #header h1 a:link, #header h1 a:visited {color:{color:Title}; display:block;}
 #header h1 a:hover, #header h1 a:active {color:{color:Link hover};}
-#description {font-family:"museo-sans", Helvetica, Arial, sans-serif; font-size:1.5em; text-align:center; line-height:autopx; margin-bottom:20px; margin-top:-5px;}
+#description {font-family:"museo-slab", Helvetica, Arial, sans-serif; font-size:1.5em; text-align:center; line-height:autopx; margin-bottom:20px; margin-top:-5px;}
 #header form {margin-bottom:20px;}
 #header form input {width:630px;}
 #header ul {margin:0 -0.25em 1.5em;}
@@ -131,7 +194,7 @@ a:hover {
               text-decoration:none;}
 #header li a:hover {background:none;}
 
-#container {background-color:{color:Container}; margin:30px auto; padding-top:5px; width:875px}
+#container {background-color:{color:Container}; margin: 0 auto 30px auto; padding-top:0; width:60%}
 
 
 
@@ -149,12 +212,20 @@ a:hover {
 
 .top_padding { width:875px; margin-bottom:20px;}
 
-#posts {background-color:{color:Background}; border-top:1px solid {color:Top line};
-        border-bottom:1px solid {color:Bottom line}; margin:0px; padding:0px; {block:IfCenterall}text-align:center;{/block:IfCenterall}font-size:{text:Caption size};}
+#posts {
+    margin: 75px 0 0 0;
+    background-color:{color:Background};
+    border-bottom:1px solid {color:Bottom line};
+    {block:IfCenterall}text-align:center;{/block:IfCenterall}font-size:{text:Caption size};}
 
 
 #posts .post {list-style:none; padding-bottom:26px; max-width:875px;
               clear:both;}
+#posts .post p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
 #posts .content {color:{color:Text}; padding:0; margin-left:0px;margin-top:0px;}
 
 #footer {margin:0 auto; max-width:875px; padding-bottom:30px;}
@@ -181,9 +252,17 @@ p.meta {color:{color:Minor text}; font-style:italic; margin:0;
 .meta a {font-style:normal; white-space:nowrap;}
 .meta .plays {font-weight:bold; font-style:normal;}
 
-h3, h4 {
+h1, h3, h4 {
   font-family: "museo-slab", Helvetica, Arial, sans-serif;
   font-weight: 700;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family:"museo-sans", Helvetica, Arial, sans-serif;
+    color: #5e5a5c;
 }
 
 h3 {
@@ -196,14 +275,14 @@ h3 {
 h4 {
   font-size: 1em;
   line-height: 1.4em;
-  margin: 1em 0 0.5em 0;
+  margin: 1em 0;
   color: #bbbbbb;
 }
 
 .title_gap
   {margin-top:-6px;}
 
-h4 {font-size:{text:Date size}; line-height:autopx; margin-bottom:0px;  font-family:"museo-sans", Helvetica, Arial, sans-serif;}
+h4 {font-size:{text:Date size}; line-height:autopx; font-family:"museo-sans", Helvetica, Arial, sans-serif;}
 
 .content a {border-bottom:1px solid {color:Line};}
 .content a:hover {border-bottom-width:1px;}
@@ -377,7 +456,7 @@ a.single_links
 a.install {
         width: 96px;
         height: 20px;
-        background: url(http://static.tumblr.com/thpaaos/dHHkt0jor/install_theme.png);
+        background: url(https://www.dropbox.com/s/b8a4nmckjk9lbnk/background-image.jpg);
         display: block;
         position: absolute;
         top: 26px;
@@ -447,23 +526,15 @@ function iResize() {
 </head>
 <body>
 
-<div id="container">
-
-
 <div id="header">
   <a href="/">
         {block:IfHeaderImage}<h1><img src="{image:Header}" class="logo" /></h1>{/block:IfHeaderImage}
         {block:IfNotHeaderImage}<h1>{Title}</h1>{/block:IfNotHeaderImage}</a>
-
-
-
-  {block:Description}<p id="description">
-    {Description}
-  </p>{/block:Description}
+    <br>
+    <a id="site-wcmc" href="http://beta.unep-wcmc.org">New WCMC site</a>
 
 <p>
 {block:IfCenterlinks}<center>{/block:IfCenterlinks}
-
 
 {block:HasPages}{block:Pages}
 
@@ -485,7 +556,15 @@ function iResize() {
 
 </div>
 
+<div id="banner">
+    {block:Description}<h1 id="description">
+    {Description}
+    </h1>
+    {/block:Description}
+</div>
 
+
+<div id="container">
 
 <ol id="posts">
   
